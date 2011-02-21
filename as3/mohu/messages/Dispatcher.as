@@ -7,6 +7,7 @@ package mohu.messages {
 	import flash.utils.Dictionary;
 	
 	public class Dispatcher {
+		
 		private var _target:*;
 		private var _listeners:Vector.<Function>;
 		private var _runOnceListeners:Dictionary;
@@ -18,7 +19,7 @@ package mohu.messages {
 			_runOnceListeners = new Dictionary(true);
 		}
 		
-		public function addListener (listener:Function, runOnce:Boolean = false):void {
+		public function addListener(listener:Function, runOnce:Boolean = false):void {
 			if (_listeners.indexOf(listener) != -1) {
 				if (_runOnceListeners[listener] && !runOnce) delete _runOnceListeners[listener];
 				return;
@@ -68,5 +69,7 @@ package mohu.messages {
 		public function get numListeners():int {
 			return listeners.length;
 		}
+		
 	}
+	
 }

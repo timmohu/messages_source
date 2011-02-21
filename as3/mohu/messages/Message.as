@@ -6,7 +6,8 @@ package mohu.messages {
 	
 	import flash.errors.IllegalOperationError;
 	
-	public class Message extends Object {
+	public class Message {
+		
 		internal var _dispatcher:Dispatcher;
 		internal var _target:*;
 		internal var _currentTarget:*;
@@ -31,5 +32,7 @@ package mohu.messages {
 		public function get currentTarget():* {
 			return _currentTarget;
 		}
+		
 	}
+	
 }
