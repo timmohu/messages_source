@@ -5,8 +5,6 @@ package mohu.messages {
 	 */
 	
 	import flash.utils.Dictionary;
-	import flash.utils.describeType;
-	import flash.utils.getQualifiedClassName;
 	
 	public class Dispatcher {
 		private var _target:*;
